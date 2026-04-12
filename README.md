@@ -10,22 +10,42 @@ For example, instead of calling `numpy.linalg.lstsq`, the least-squares method i
 
 ## Exercises
 
+Based on Andrew Ng's Machine Learning Specialization.
+
+### Course 1: Supervised Machine Learning
+
 | # | Concept | Script |
 |---|---------|--------|
-| 1 | Least-Squares Method | `least_squares.py` |
+| 1 | Gradient Descent for Linear Regression | `linear-regression-gd.py` |
+| 2 | Least-Squares Method (Normal Equation) | `least-squares.py` |
+| 3 | Feature Engineering & Scaling | `feature-scaling.py` |
+| 4 | Logistic Regression | `logistic-regression.py` |
+| 5 | Overfitting & Regularization | `regularization.py` |
+
+### Course 2: Advanced Learning Algorithms
+
+| # | Concept | Script |
+|---|---------|--------|
+| 6 | Neural Network from Scratch | `neural-network.py` |
+| 7 | Multiclass Classification (Softmax) | `softmax-regression.py` |
+| 8 | Decision Tree | `decision-tree.py` |
+| 9 | Random Forest & Boosting | `ensemble-methods.py` |
+| 10 | Bias-Variance & Model Selection | `bias-variance.py` |
+
+### Course 3: Unsupervised Learning & Recommenders
+
+| # | Concept | Script |
+|---|---------|--------|
+| 11 | K-Means Clustering | `kmeans.py` |
+| 12 | Anomaly Detection | `anomaly-detection.py` |
+| 13 | Collaborative Filtering | `collaborative-filtering.py` |
+| 14 | Principal Component Analysis | `pca.py` |
+| 15 | Reinforcement Learning (Q-Learning) | `reinforcement-learning.py` |
 
 ## How to Run
 
 ```bash
-python least_squares.py
+python linear-regression-gd.py
 ```
 
 Each script is self-contained and prints its results to the console so you can inspect every intermediate step.
-
-## Structure
-
-```
-ML-exercises/
-├── README.md
-└── least_squares.py   # Normal-equation implementation of linear least squares
-```
