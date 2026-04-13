@@ -66,16 +66,20 @@ class LinearRegressionGD:
     def __repr__(self):
         if self.w is None:
             return "The model hasn't been fitted, run model.fit() first."
-        weights = [f"{w_i:.4f}*x_{i}" for i, w_i in enumerate(self.w)]
-        return "f(x) = " + " + ".join(weights) + f" + {self.b:.4f}"
+    
+        w_orig = self.w / self.std                          # correct weight denorm
+        b_orig = self.b - np.sum(self.w * self.mean / self.std)  # correct bias denorm
+    
+        weights = [f"{w_i:.4f}*x_{i}" for i, w_i in enumerate(w_orig)]
+        return "f(x) = " + " + ".join(weights) + f" + {b_orig:.4f}"
 
 if __name__ == "__main__":
     x = np.array([[1, 10000], [2, 30000], [3, 40000], [4, 50000]])
     y = np.array([9999, 29998, 39997, 49996])
     
-    model = LinearRegressionGD(max_iter=10000, alpha=1, epsilon=1e-8)
+    model = LinearRegressionGD(max_iter=10000, alpha=1, epsilon=1e-12)
     model.fit(x, y)
     
-    print(f"Prediction for [5, 60000]: {model.predict(np.array([5, 60000])):.2f}")
+    print(f"Prediction for [6, 10]: {model.predict(np.array([6, 10])):.2f}")
     print(f"Model: {model}")
     model.plot_learning_curve()
