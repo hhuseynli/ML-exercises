@@ -73,9 +73,9 @@ if __name__ == "__main__":
     x = np.array([[1, 10000], [2, 30000], [3, 40000], [4, 50000]])
     y = np.array([9999, 29998, 39997, 49996])
     
-    model = LinearRegressionGD(max_iter=10000, alpha=0.1, epsilon=1e-10)
+    model = LinearRegressionGD(max_iter=10000, alpha=1, epsilon=1e-8)
     model.fit(x, y)
     
-    print(f"Prediction for [5, 6]: {model.predict(np.array([5, 60000])):.2f}")
+    print(f"Prediction for [5, 60000]: {model.predict(np.array([5, 60000])):.2f}")
     print(f"Model: {model}")
     model.plot_learning_curve()
