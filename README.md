@@ -8,44 +8,39 @@ Understanding an algorithm conceptually is not the same as understanding it prac
 
 For example, instead of calling `numpy.linalg.lstsq`, the least-squares method is implemented by hand — deriving the normal equations, solving the linear system, and verifying the result — to build genuine intuition about what the algorithm actually does.
 
+## Project Structure
+
+```
+models/      — Class implementations of ML algorithms from scratch
+examples/    — Practical applications using those implementations
+```
+
 ## Exercises
 
 Based on Andrew Ng's Machine Learning Specialization.
 
 ### Course 1: Supervised Machine Learning
 
-| # | Concept | Script |
-|---|---------|--------|
-| 1 | Gradient Descent for Linear Regression | `linear-regression-gd.py` |
-| 2 | Least-Squares Method (Normal Equation) | `least-squares.py` |
-| 3 | Feature Engineering & Scaling | `feature-scaling.py` |
-| 4 | Logistic Regression | `logistic-regression.py` |
-| 5 | Overfitting & Regularization | `regularization.py` |
+| # | Concept | Type | Script |
+|---|---------|------|--------|
+| 1 | Linear Regression (Gradient Descent) | model | `models/linear_regression_gd.py` |
+| 2 | Linear Regression | example | `examples/linear-regression.py` |
+| 3 | Polynomial Regression | example | `examples/polynomial-regression.py` |
+| 4 | Feature Engineering | example | `examples/feature-engineering.py` |
 
-### Course 2: Advanced Learning Algorithms
+### Planned
 
-| # | Concept | Script |
-|---|---------|--------|
-| 6 | Neural Network from Scratch | `neural-network.py` |
-| 7 | Multiclass Classification (Softmax) | `softmax-regression.py` |
-| 8 | Decision Tree | `decision-tree.py` |
-| 9 | Random Forest & Boosting | `ensemble-methods.py` |
-| 10 | Bias-Variance & Model Selection | `bias-variance.py` |
-
-### Course 3: Unsupervised Learning & Recommenders
-
-| # | Concept | Script |
-|---|---------|--------|
-| 11 | K-Means Clustering | `kmeans.py` |
-| 12 | Anomaly Detection | `anomaly-detection.py` |
-| 13 | Collaborative Filtering | `collaborative-filtering.py` |
-| 14 | Principal Component Analysis | `pca.py` |
-| 15 | Reinforcement Learning (Q-Learning) | `reinforcement-learning.py` |
+| # | Concept | Type |
+|---|---------|------|
+| 5 | Logistic Regression | model |
+| 6 | Overfitting & Regularization | example |
+| 7 | Least-Squares Method (Normal Equation) | model |
 
 ## How to Run
 
 ```bash
-python linear-regression-gd.py
+python3 models/linear_regression_gd.py
+python3 examples/feature-engineering.py
 ```
 
 Each script is self-contained and prints its results to the console so you can inspect every intermediate step.
