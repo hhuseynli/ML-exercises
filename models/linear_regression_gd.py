@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class LinearRegressionGD:
-    def __init__(self, max_iter: int = 10000, alpha: float = 0.01, epsilon: float = 1e-8, w_init: np.ndarray | None = None, b_init: float = 0.0):
+    def __init__(self, max_iter: int = 10000, alpha: float = 0.01, epsilon: float = 1e-8, w_init = None, b_init: float = 0.0):
         self.max_iter = max_iter
         self.alpha = alpha
         self.w = w_init
